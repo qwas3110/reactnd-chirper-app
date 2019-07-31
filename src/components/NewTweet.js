@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { handleAddTweet } from '../actions/tweets';
+
+
 
 class NewTweet extends Component {
 
@@ -22,8 +25,9 @@ class NewTweet extends Component {
         const { text } = this.state;
 
         // todo: 添加推文到store
-
-        console.log('New Tweet: ', text);
+        const { dispatch,id } = this.props;
+        console.log(id);
+        dispatch(handleAddTweet(text,id));
 
         this.setState({
             text: ''
