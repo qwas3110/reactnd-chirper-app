@@ -5,6 +5,9 @@ import { handleInitialData } from '../actions/shared';
 import Dashboard from "./Dashboard";
 
 
+//导入加载栏
+import LoadingBar from 'react-redux-loading';
+
 class App extends Component {
 
   componentDidMount() {
@@ -16,6 +19,9 @@ class App extends Component {
   render() {
     return (
       <div>
+
+        <LoadingBar/>
+
         {
           this.props.loading === true
             ? null
