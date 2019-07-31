@@ -10,6 +10,8 @@ import {
     from 'react-icons/ti/index'
 
 
+import { handleToggleTweet } from '../actions/tweets';
+
 class Tweet extends React.Component {
 
     toParent = (e,id) => {
@@ -22,8 +24,16 @@ class Tweet extends React.Component {
     handleLike = (e) => {
         e.preventDefault();
 
+        const { dispatch, tweet, authedUser } = this.props;
+
         // todo: 当你喜欢这条推文的时候，
         //  将信息保存在我们重定向store的状态中.以及我们的数据库
+
+        dispatch(handleToggleTweet({
+            id: tweet.id,
+            hasLiked: tweet.hasLiked,
+            authedUser,
+        }))
     }
 
 
