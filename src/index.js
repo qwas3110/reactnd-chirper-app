@@ -5,12 +5,12 @@ import App from './components/App'
 
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-
+import middleWare from './middleware';
 import reducers from './reducers';
 
 
 
-const store = createStore(reducers);
+const store = createStore(reducers,middleWare);
 
 
 
