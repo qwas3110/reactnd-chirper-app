@@ -35,6 +35,7 @@ class NewTweet extends Component {
     }
 
     render() {
+
         const { text } = this.state;
 
         {/* 如果提交新推文，则重定向到主视图  */}

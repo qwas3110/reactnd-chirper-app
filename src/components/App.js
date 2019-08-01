@@ -9,6 +9,7 @@ import Dashboard from "./Dashboard";
 //导入加载栏
 import LoadingBar from 'react-redux-loading';
 import NewTweet from "./NewTweet";
+import TweetPage from "./TweetPage";
 
 class App extends Component {
 
@@ -27,7 +28,7 @@ class App extends Component {
         {
           this.props.loading === true
             ? null
-            : <NewTweet/>
+            : <TweetPage match={{params: {id: '8xf0y6ziyjabvozdd253nd'}}}/>
         }
 
       </div>
